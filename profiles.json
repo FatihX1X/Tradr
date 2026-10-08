@@ -1,0 +1,1593 @@
+[
+  {
+    "approved": true,
+    "arcus_symbol": "BTC",
+    "lighter_symbol": "BTC",
+    "category": "CRYPTO",
+    "underlying": "Bitcoin",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "BTC-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "BTC-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": true,
+    "arcus_symbol": "ETH",
+    "lighter_symbol": "ETH",
+    "category": "CRYPTO",
+    "underlying": "Ethereum",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "ETH-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "ETH-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": true,
+    "arcus_symbol": "SOL",
+    "lighter_symbol": "SOL",
+    "category": "CRYPTO",
+    "underlying": "Solana",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "SOL-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "SOL-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": true,
+    "arcus_symbol": "HYPE",
+    "lighter_symbol": "HYPE",
+    "category": "CRYPTO",
+    "underlying": "Hyperliquid",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "HYPE-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "HYPE-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": true,
+    "arcus_symbol": "ZEC",
+    "lighter_symbol": "ZEC",
+    "category": "CRYPTO",
+    "underlying": "Zcash",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "ZEC-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "ZEC-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "AMD",
+    "lighter_symbol": "AMD",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "INTC",
+    "lighter_symbol": "INTC",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "GOOGL",
+    "lighter_symbol": "GOOGL",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "META",
+    "lighter_symbol": "META",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "MU",
+    "lighter_symbol": "MU",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "BABA",
+    "lighter_symbol": "BABA",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "CRCL",
+    "lighter_symbol": "CRCL",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "SLV",
+    "lighter_symbol": "SLV",
+    "category": "COMMODITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "USO",
+    "lighter_symbol": "USO",
+    "category": "COMMODITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "SPY",
+    "lighter_symbol": "SPY",
+    "category": "INDICES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "QQQ",
+    "lighter_symbol": "QQQ",
+    "category": "INDICES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "SGOV",
+    "lighter_symbol": "SGOV",
+    "category": "INDICES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "NVDA",
+    "lighter_symbol": "NVDA",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "TSLA",
+    "lighter_symbol": "TSLA",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "AAPL",
+    "lighter_symbol": "AAPL",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "AMZN",
+    "lighter_symbol": "AMZN",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "MSFT",
+    "lighter_symbol": "MSFT",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "SNDK",
+    "lighter_symbol": "SNDK",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "PLTR",
+    "lighter_symbol": "PLTR",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "CRWV",
+    "lighter_symbol": "CRWV",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "ORCL",
+    "lighter_symbol": "ORCL",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "SPCX",
+    "lighter_symbol": "SPCX",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "BE",
+    "lighter_symbol": "BE",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "USAR",
+    "lighter_symbol": "USAR",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": true,
+    "arcus_symbol": "LIT",
+    "lighter_symbol": "LIT",
+    "category": "CRYPTO",
+    "underlying": "Lighter",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "LIT-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "LIT-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": true,
+    "arcus_symbol": "XRP",
+    "lighter_symbol": "XRP",
+    "category": "CRYPTO",
+    "underlying": "XRP",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "XRP-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "XRP-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "COIN",
+    "lighter_symbol": "COIN",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "SKHY",
+    "lighter_symbol": "SKHY",
+    "category": "EQUITIES",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "CASHCAT",
+    "lighter_symbol": "CASHCAT",
+    "category": "CRYPTO",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": true,
+    "arcus_symbol": "NEAR",
+    "lighter_symbol": "NEAR",
+    "category": "CRYPTO",
+    "underlying": "NEAR Protocol",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "NEAR-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "NEAR-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": true,
+    "arcus_symbol": "SUI",
+    "lighter_symbol": "SUI",
+    "category": "CRYPTO",
+    "underlying": "Sui",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "SUI-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "SUI-USD underlying index; live divergence gated",
+      "dividends": "none",
+      "splits": "none",
+      "roll": "none",
+      "margin_mode": "cross"
+    },
+    "evidence": "Reviewed linear USD perpetuals, quantity in native base units. Independent venue indexes are checked live; matching does not guarantee identical prices."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "USELESS",
+    "lighter_symbol": "USELESS",
+    "category": "CRYPTO",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  },
+  {
+    "approved": false,
+    "arcus_symbol": "PONS",
+    "lighter_symbol": "PONS",
+    "category": "CRYPTO",
+    "underlying": "",
+    "quote_currency": "USD",
+    "settlement": "linear-perpetual",
+    "reviewed_at": "2026-10-07T16:49:28.328413+00:00",
+    "valid_until": "2026-10-14T16:49:28.328413+00:00",
+    "sources": [
+      "https://docs.arcus.xyz/concepts/perpetuals/overview.md",
+      "https://docs.arcus.xyz/api-reference/exchange/place-order.md",
+      "https://apidocs.lighter.xyz/docs/trading.md",
+      "https://docs.lighter.xyz/trading/contract-specifications.md"
+    ],
+    "offhours_approved": false,
+    "arcus": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "lighter": {
+      "multiplier": "1",
+      "oracle": "",
+      "dividends": "",
+      "splits": "",
+      "roll": "",
+      "margin_mode": "cross"
+    },
+    "event_state": {
+      "checked_at": "2026-10-07T16:41:34.153573+00:00",
+      "valid_until": "2026-10-07T16:41:34.153573+00:00",
+      "sources": [],
+      "holiday_checked": false,
+      "corporate_actions_checked": false,
+      "session_known": false,
+      "event_in_holding_window": true
+    },
+    "evidence": "Not approved: verify underlying identity, dividends, splits, roll and session calendar on both venues before enabling."
+  }
+]

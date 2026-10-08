@@ -1,0 +1,23 @@
+{
+  "state_dir": ".tradr",
+  "profiles_path": "profiles.json",
+  "boosts_path": "boosts.json",
+  "daily_loss_limit_usd": null,
+  "paper_capital_per_venue": "100",
+  "max_leg_usd": "50",
+  "equity_fraction": "0.5",
+  "min_edge_bps": "10",
+  "slippage_bps": "20",
+  "emergency_slippage_bps": "100",
+  "max_hold_seconds": 14400,
+  "maker_wait_seconds": 30,
+  "hedge_timeout_seconds": 5,
+  "health_host": "127.0.0.1",
+  "health_port": 8787,
+  "arcus_address": "",
+  "arcus_account_index": 0,
+  "lighter_account_index": -1,
+  "lighter_api_key_index": 4,
+  "poll_seconds": 2,
+  "discovery_seconds": 60
+}

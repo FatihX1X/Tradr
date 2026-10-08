@@ -1,0 +1,15 @@
+[
+  {
+    "venue": "lighter",
+    "symbol": "*",
+    "style": "any",
+    "access_path": "robinhood_wallet",
+    "multiplier": "2",
+    "verified": true,
+    "eligibility_confirmed": false,
+    "verified_at": "2026-10-07T00:00:00Z",
+    "valid_until": "2026-10-14T00:00:00Z",
+    "source_url": "https://robinhood.com/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/?lang=en",
+    "evidence": "The published 2x applies to trades through Robinhood Wallet. Eligibility of this independent API bot is NOT confirmed. This rule never boosts API candidates."
+  }
+]

@@ -1,0 +1,21 @@
+services:
+  tradr:
+    build: .
+    init: true
+    restart: "no"
+    stop_grace_period: 90s
+    environment:
+      ARCUS_API_PRIVATE_KEY: ${ARCUS_API_PRIVATE_KEY:-}
+      LIGHTER_API_PRIVATE_KEY: ${LIGHTER_API_PRIVATE_KEY:-}
+    volumes:
+      - ./config.local.json:/app/config.local.json:ro
+      - ./profiles.json:/app/profiles.json:ro
+      - ./boosts.json:/app/boosts.json:ro
+      - tradr-state:/app/.tradr
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8787/health', timeout=2)"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+volumes:
+  tradr-state:

@@ -1,0 +1,24 @@
+[Unit]
+Description=Tradr Arcus-Lighter RH hedge runner
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tradr
+Group=tradr
+WorkingDirectory=/opt/tradr
+EnvironmentFile=/etc/tradr/secrets.env
+ExecStart=/opt/tradr/.venv/bin/tradr --config /etc/tradr/config.json run --mode paper
+KillSignal=SIGTERM
+TimeoutStopSec=90
+# A crash must be reconciled before an operator deliberately starts a new trading session.
+Restart=no
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/tradr
+
+[Install]
+WantedBy=multi-user.target
