@@ -5,10 +5,11 @@ import time
 
 from .models import BPS, D, Intent, Order, dec, grid, common_step
 from .strategy import Scanner, account_risk
+from .telemetry import market_snapshots
 
 
 class Engine:
-    def __init__(self, config, policies, journal, venues):
+    def __init__(self, config, policies, journal, venues, mode="paper"):
         self.config, self.policies, self.journal, self.venues = config, policies, journal, venues
         self.scanner = Scanner(config, policies)
         self.accounts = {}
@@ -16,6 +17,8 @@ class Engine:
         self.halted = False
         self._last_accounts = 0
         self._cooldown = journal.get("cooldown_until", 0)
+        self.mode = mode
+        self._last_publish = 0
 
     async def refresh_accounts(self, force=False):
         if force or not self.accounts or any(time.monotonic() - a.received >= 1.5
@@ -68,19 +71,27 @@ class Engine:
         for name, account in self.accounts.items():
             exposures[name] = sum(p.quantity * self.venues[name].markets[mid].multiplier
                                   for mid, p in account.positions.items())
-        return {"phase": self.phase, "reason": self.reason, "timestamp": time.time(), "hedge": hedge,
+        return {"execution_mode": self.mode, "market_data_mode": "production-public-feeds",
+                "phase": self.phase, "reason": self.reason, "timestamp": time.time(), "hedge": hedge,
                 "accounts": {name: {"equity": str(a.equity), "free_collateral": str(a.free),
-                                     "positions": {str(mid): str(p.quantity) for mid, p in a.positions.items()}}
+                                     "positions": {str(mid): str(p.quantity) for mid, p in a.positions.items()},
+                                     "maker_fee_fraction": str(a.maker_fee), "taker_fee_fraction": str(a.taker_fee),
+                                     "balance_source": "simulated" if self.mode == "paper" else "venue-account"}
                              for name, a in self.accounts.items()},
                 "net_exposure": str(sum(exposures.values())),
                 "daily_loss_usd": str(self.loss()) if self.accounts else None,
                 "excluded": self.scanner.reasons,
+                "market_data": market_snapshots(self.venues, self.policies),
+                "opportunity_evaluations": self.scanner.evaluations,
                 "feeds": {name: {"connected": getattr(getattr(v, "feed", v), "connected", False),
-                                 "error": getattr(getattr(v, "feed", v), "last_error", None)}
+                                 "error": getattr(getattr(v, "feed", v), "last_error", None),
+                                 "metadata_ready": getattr(getattr(v, "feed", v), "metadata_ready", True)}
                           for name, v in self.venues.items()}}
 
-    def publish(self):
-        self.journal.put("health", self.health())
+    def publish(self, force=False):
+        if force or time.monotonic()-self._last_publish >= 1:
+            self.journal.put("health", self.health())
+            self._last_publish = time.monotonic()
 
     def intent(self, market, buy, quantity, *, reduce=False, maker=False, emergency=False):
         book = self.venues[market.venue].books[market.id]
@@ -421,9 +432,18 @@ class Engine:
                 await self.refresh_accounts()
                 risk = self.guard()
                 if risk:
+                    data_fault = "metadata/fee refresh unavailable" in risk or "Account state stale" in risk
+                    flat = self.journal.get("hedge") is None and all(
+                        not a.positions and not a.open_orders for a in self.accounts.values())
+                    if data_fault and flat:
+                        self.phase, self.reason = "paused", risk
+                        self.publish()
+                        await asyncio.sleep(.25)
+                        continue
                     self.reason, self.halted = risk, True
                     await self.flatten()
                     break
+                self.reason = ""
                 if self.journal.get("hedge"):
                     if self.exit_due():
                         await self.flatten()
@@ -447,4 +467,4 @@ class Engine:
                 self.journal.event("guarded_error", {"error": type(exc).__name__})
                 self.publish()
             await asyncio.sleep(.25)
-        self.publish()
+        self.publish(force=True)

@@ -36,6 +36,22 @@ class Paper:
     def books(self):
         return self.feed.books
 
+    def fees_for(self, market):
+        if self.name == "lighter" and self.config.paper_lighter_tier == "standard":
+            # Public RH orderBookDetails exposes current Standard rates in percent.
+            if "maker_fee" not in market.raw or "taker_fee" not in market.raw:
+                raise TransportError("Paper Standard fee metadata unavailable")
+            return dec(market.raw["maker_fee"])/100, dec(market.raw["taker_fee"])/100
+        return self.feed.maker_fee, self.feed.taker_fee
+
+    @property
+    def maker_fee(self):
+        return max((self.fees_for(m)[0] for m in self.markets.values() if m.active), default=D(0))
+
+    @property
+    def taker_fee(self):
+        return max((self.fees_for(m)[1] for m in self.markets.values() if m.active), default=D(0))
+
     def state(self):
         return {"cash": str(self.cash),
             "last_funding_hour": self.last_funding_hour,
@@ -89,7 +105,8 @@ class Paper:
                 break
         if filled:
             average = value / filled
-            fee = self.feed.maker_fee if intent.maker else self.feed.taker_fee
+            fees = self.fees_for(market)
+            fee = fees[0] if intent.maker else fees[1]
             fee = max(D(0), fee)
             signed = filled if intent.buy else -filled
             self.cash -= signed * market.multiplier * average + value * market.multiplier * fee
@@ -123,7 +140,7 @@ class Paper:
             equity += p.quantity * m.multiplier * m.mark
             used += abs(p.quantity) * m.multiplier * m.mark  # configured 1x margin
         return Account(equity, max(D(0), equity - used), dict(self.positions), set(self.pending),
-                       self.feed.maker_fee, self.feed.taker_fee, dec(self.config.paper_capital_per_venue))
+                       self.maker_fee, self.taker_fee, dec(self.config.paper_capital_per_venue))
 
     async def prepare_market(self, market, profile):
         self.modes[market.id] = profile["margin_mode"]
@@ -133,7 +150,11 @@ class Paper:
         if intent.maker and ((intent.buy and intent.price >= book.asks[0][0]) or (
                 not intent.buy and intent.price <= book.bids[0][0])):
             return Order(intent.id, "rejected")
-        await asyncio.sleep(.3 if self.name == "lighter" else .02)
+        delay = .02
+        if self.name == "lighter":
+            delay = (.2 if intent.maker else .3) if self.config.paper_lighter_tier == "standard" else (
+                0 if intent.maker else .2)
+        await asyncio.sleep(delay)
         self.pending[intent.id] = intent
         order = self.match(intent)
         if order.terminal:

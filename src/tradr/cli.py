@@ -6,7 +6,9 @@ import json
 import logging
 import signal
 import sys
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from aiohttp import web
 from filelock import FileLock, Timeout
@@ -34,7 +36,7 @@ async def feeds(config, journal, live):
 async def execute(args, config):
     journal = Journal(config.state_dir, args.mode)
     lock = FileLock(str(Path(config.state_dir) / f"{args.mode}.lock"), timeout=0)
-    acquired, venues, runner, engine, discovery = False, {}, None, None, None
+    acquired, venues, runner, engine, discovery, display = False, {}, None, None, None, None
     try:
         lock.acquire()
         acquired = True
@@ -57,7 +59,7 @@ async def execute(args, config):
                       if m.symbol in a_symbols or m.symbol in aliases.values()]
         await asyncio.gather(venues["arcus"].stream(selected_a), venues["lighter"].stream(selected_b))
         execution = venues if args.mode == "live" else {n: Paper(v, config, journal) for n, v in venues.items()}
-        engine = Engine(config, policies, journal, execution)
+        engine = Engine(config, policies, journal, execution, mode=args.mode)
 
         async def refresh_discovery():
             while True:
@@ -90,7 +92,7 @@ async def execute(args, config):
             async def health(_):
                 status = engine.health()
                 ready = engine.phase not in {"starting", "recovery", "paused"} and all(
-                    v.connected for v in venues.values())
+                    v.connected and v.metadata_ready for v in venues.values())
                 return web.json_response(status, status=200 if ready else 503)
 
             app.router.add_get("/health", health)
@@ -108,10 +110,35 @@ async def execute(args, config):
         for sig in (signal.SIGINT, signal.SIGTERM):
             signal.signal(sig, stop_handler)
         print(f"Tradr {args.mode}; state={config.state_dir}; health=localhost:{config.health_port}", flush=True)
+
+        async def show_quotes():
+            while True:
+                await asyncio.sleep(args.quote_interval)
+                snapshot = engine.health()
+                stamp = datetime.now(ZoneInfo("Europe/Istanbul")).isoformat(timespec="seconds")
+                for symbol in ("BTC", "ETH", "SOL"):
+                    row = snapshot["market_data"].get(symbol)
+                    if row is None:
+                        continue
+                    parts = []
+                    for name in ("arcus", "lighter"):
+                        data = row[name]
+                        fresh = data["book_fresh"] and data["price_fresh"]
+                        parts.append(f"{name} {data['bid']}/{data['ask']} mark={data['mark']} "
+                                     f"funding/h={data['funding_hourly_estimate_fraction']} "
+                                     f"{'fresh' if fresh else 'STALE'}")
+                    print(f"{stamp} {symbol} | " + " | ".join(parts) +
+                          f" | {engine.scanner.reasons.get(symbol, engine.phase)}", flush=True)
+
+        if args.quote_interval > 0:
+            display = asyncio.create_task(show_quotes())
         await engine.run(seconds=args.seconds, flatten_only=args.command == "flatten")
         print(json.dumps(engine.health(), ensure_ascii=False, indent=2), flush=True)
         return 2 if engine.phase == "recovery" else 0
     finally:
+        if display:
+            display.cancel()
+            await asyncio.gather(display, return_exceptions=True)
         if discovery:
             discovery.cancel()
             await asyncio.gather(discovery, return_exceptions=True)
@@ -205,12 +232,15 @@ def main(argv=None):
     sub = parser.add_subparsers(dest="command", required=True)
     p = sub.add_parser("setup")
     p.add_argument("--daily-loss-limit")
-    for command in ("doctor", "run", "status", "stop", "flatten", "report"):
+    for command in ("doctor", "run", "status", "stop", "flatten", "report", "markets"):
         p = sub.add_parser(command)
         p.add_argument("--mode", choices=("paper", "live"), default="paper")
         if command in ("run", "flatten"):
             p.add_argument("--seconds", type=float)
             p.add_argument("--daily-loss-limit")
+            p.add_argument("--quote-interval", type=float, default=10)
+        if command == "markets":
+            p.add_argument("--symbol", action="append")
         if command == "doctor":
             p.add_argument("--export-profiles")
             p.add_argument("--signer-check", action="store_true")
@@ -223,12 +253,22 @@ def main(argv=None):
         config = Config.load(args.config)
         if args.command == "setup":
             return setup(args, config)
-        if args.command in ("status", "report", "stop"):
+        if args.command in ("status", "report", "stop", "markets"):
             journal = Journal(config.state_dir, args.mode)
             try:
                 if args.command == "stop":
                     journal.put("control", "stop")
                     print("Stop kaydedildi; çalışan bot emirleri iptal edip pozisyonları kapatmayı deneyecek.")
+                elif args.command == "markets":
+                    health = journal.get("health", {})
+                    rows = health.get("market_data", {})
+                    selected = args.symbol or list(rows)
+                    print(json.dumps({"snapshot_timestamp": health.get("timestamp"),
+                        "execution_mode": health.get("execution_mode"),
+                        "prices": {s: rows[s] for s in selected if s in rows},
+                        "evaluations": {s: health.get("opportunity_evaluations", {}).get(s, []) for s in selected},
+                        "excluded": {s: health.get("excluded", {}).get(s) for s in selected}},
+                        indent=2, ensure_ascii=False))
                 else:
                     print(json.dumps(journal.report() if args.command == "report" else journal.get("health"),
                                      indent=2, ensure_ascii=False))

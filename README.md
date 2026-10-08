@@ -44,6 +44,7 @@ Bu örnekteki `1` USD kullanıcı seçiminin örneğidir; sunucuda limit verilme
 | `lighter_api_key_index` | RH'de 4–156 veya 158–254; 0–3 ve 157 kullanılmaz |
 | `daily_loss_limit_usd` | Kullanıcının seçtiği pozitif USD durdurma eşiği, zorunlu |
 | `paper_capital_per_venue` | Simülasyonda platform başına `100` USD |
+| `paper_lighter_tier` | Varsayılan `standard`: public RH market fee verisi; `premium`: muhafazakâr Premium ücret/latency modeli |
 | `max_leg_usd` | Bacak başına en çok `50` USD |
 | `equity_fraction` | Küçük hesabın equity'sinin en çok `0.5` katı |
 | `profiles_path` / `boosts_path` | İncelenmiş sözleşme ve kampanya kayıtları |
@@ -103,6 +104,7 @@ Yapay hacim, kendine işlem, puan için giriş/çıkış döngüsü veya scoring
 ```powershell
 .\.venv\Scripts\tradr.exe status --mode paper
 .\.venv\Scripts\tradr.exe report --mode paper
+.\.venv\Scripts\tradr.exe markets --mode paper --symbol BTC --symbol ETH
 .\.venv\Scripts\tradr.exe stop --mode paper
 # Canlı süreç durduktan sonra mevcut bot emirlerini/pozisyonlarını uzlaştırıp kapatmayı denemek:
 .\.venv\Scripts\tradr.exe flatten --mode live
@@ -114,6 +116,8 @@ Yapay hacim, kendine işlem, puan için giriş/çıkış döngüsü veya scoring
 - Her emir ağ gönderiminden önce journal'a yazılır. `200`/`202` veya tx hash gerçekleşme değildir. Kayıp yanıt sonrasında aynı giriş yeniden gönderilmez. Belirsiz teslim, iptal veya fill durumu yeni girişleri engeller.
 - Restart eski bot pozisyonlarını uzlaştırıp kapatmayı dener ve yeni işlem açmadan çıkar. Onaylanan toparlanma sonrasında kullanıcı yeni çalışma başlatır. Journal/state dizinini pozisyonlar açıkken silmeyin veya başka hesapla yeniden kullanmayın.
 - Ctrl+C/SIGTERM `stop` ister. Maker beklemesi sırasında da durdurma kontrol edilir. Health endpoint yalnızca loopback'te `http://127.0.0.1:8787/health`; değişiklik yapan HTTP endpoint'i yoktur. `status` kayıtlı zamanı gösterir; process kapalıyken bu eski bir snapshot'tır.
+- `run` terminalde her 10 saniyede BTC/ETH/SOL gerçek bid/ask, mark, signed saatlik fonlama tahmini ve veri güncelliğini gösterir. `--quote-interval 5` ile aralık değiştirilebilir; `0` çıktıyı kapatır. `markets` ve `/health` gerçek fiyatlar, kaynak zamanı/veri yaşı ve iki yönün net maliyet hesabını gösterir. Bakiyeler `balance_source=simulated` etiketiyle ayrılır; ücret/kayma rezervi gerçekleşmiş zarar değildir.
+- Açık emir/pozisyon yokken geçici metadata veya fee hatasında bot `paused` kalır, veri yenilenince devam eder. Pozisyon açıkken aynı hata risk/kurtarma akışını tetikler. Health bağlantılar açık olsa bile metadata hazır değilse `503` döner.
 
 ## Sunucu
 

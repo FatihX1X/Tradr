@@ -4,6 +4,7 @@
   "boosts_path": "boosts.json",
   "daily_loss_limit_usd": null,
   "paper_capital_per_venue": "100",
+  "paper_lighter_tier": "standard",
   "max_leg_usd": "50",
   "equity_fraction": "0.5",
   "min_edge_bps": "10",

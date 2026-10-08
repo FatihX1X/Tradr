@@ -15,6 +15,7 @@ class Config:
     boosts_path: str = "boosts.json"
     daily_loss_limit_usd: str | None = None
     paper_capital_per_venue: str = "100"
+    paper_lighter_tier: str = "standard"
     max_leg_usd: str = "50"
     equity_fraction: str = "0.5"
     min_edge_bps: str = "10"
@@ -33,6 +34,8 @@ class Config:
     discovery_seconds: int = 60
 
     def validate(self, live: bool = False):
+        if self.paper_lighter_tier not in {"standard", "premium"}:
+            raise ValueError("paper_lighter_tier must be standard or premium")
         for key in ("paper_capital_per_venue", "max_leg_usd", "equity_fraction", "min_edge_bps",
                     "slippage_bps", "emergency_slippage_bps"):
             if dec(getattr(self, key)) <= 0:

@@ -62,10 +62,12 @@ class Scanner:
     def __init__(self, config: Config, policies: Policies):
         self.config, self.policies = config, policies
         self.reasons: dict[str, str] = {}
+        self.evaluations: dict[str, list[dict]] = {}
 
     def scan(self, arcus: dict[int, Market], lighter: dict[int, Market], books: dict[str, dict[int, Book]],
              accounts: dict[str, Account]) -> list[Candidate]:
         self.reasons = {}
+        self.evaluations = {}
         result = []
         # Reviewed aliases can link different symbols; never infer XAU == a gold ETF, for example.
         aliases = {p.get("arcus_symbol"): p.get("lighter_symbol") for p in self.policies.profiles}
@@ -115,6 +117,12 @@ class Scanner:
                         if maker and boost <= 1:
                             continue
                         candidate = self.evaluate(long, short, lb, sb, exposure, accounts, boost, maker)
+                        self.evaluations.setdefault(a.symbol, []).append({
+                            "long_venue": long.venue, "short_venue": short.venue,
+                            "entry_buy_price": str(candidate.long_price), "entry_sell_price": str(candidate.short_price),
+                            "exposure": str(candidate.quantity), "net_edge_bps_estimate": str(candidate.edge_bps),
+                            "roundtrip_cost_usd_estimate": str(candidate.cost_usd), "boost": str(candidate.boost),
+                            "maker_venue": maker, "passes_economic_gate": candidate.edge_bps >= dec(self.config.min_edge_bps)})
                         if candidate.edge_bps >= dec(self.config.min_edge_bps):
                             result.append(candidate)
                 if not any(c.symbol == a.symbol or c.symbol == b.symbol for c in result):
